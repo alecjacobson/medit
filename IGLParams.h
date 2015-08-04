@@ -25,7 +25,7 @@ class IGLParams
     // ratio of in to out hot dog slice widths
     double hot_dog_ratio;
     ColorMap color_map;
-    float easter_red[3];
+    float easter_red[4];
     float easter_s;
     float easter_v;
     float tet_color[4];

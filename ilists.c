@@ -414,7 +414,7 @@ int tetraIsoPOVray(pScene sc,pMesh mesh) {
 
   strcpy(data,mesh->name);
   ptr = strstr(data,".mesh");
-  if ( ptr )  ptr = '\0';
+  if ( ptr )  ptr = NULL;
   strcat(data,".pov"); 
   if ( ddebug )  fprintf(stdout,"  Writing POVRay file %s\n",data);
   isofil = fopen(data,"w");

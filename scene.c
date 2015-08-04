@@ -878,7 +878,7 @@ void redrawScene() {
     {
       sprintf(path,"%s.%.3d." PNG,path,numdep);
       static std::list<std::thread> thread_list;
-      thread_list.push_back(igl::render_to_png_async(std::string(path),sc->par.xs,sc->par.ys,true,false));
+      thread_list.push_back(igl::png::render_to_png_async(std::string(path),sc->par.xs,sc->par.ys,true,false));
     }
     sc->igl_params->render_on_next = false;
   }
@@ -1176,6 +1176,7 @@ void TW_CALL get_C_HIDE(void *value, void *clientData)
 
 void initAntTweakBar(pScene sc,pMesh mesh)
 {
+  using namespace igl::anttweakbar;
   printf("initAntTweakBar\n");
   TwInit(TW_OPENGL, NULL);
   sc->rebar.TwNewBar("bar");
@@ -1352,7 +1353,7 @@ void initAntTweakBar(pScene sc,pMesh mesh)
     {COLOR_MAP_PARULA,"PARULA"},
   };
   TwType ColorMapTypeTW = 
-    igl::ReTwDefineEnum(
+    igl::anttweakbar::ReTwDefineEnum(
       "ColorMapType", 
       ColorMapTypeEV, 
       NUM_COLOR_MAP);

@@ -9,7 +9,7 @@ extern "C" {
 #include "sproto.h"
 
 #ifdef IGL
-#include "gl2ps.h"
+//#include "gl2ps.h"
 #endif
 
 /* OpenGL's GL_3D_COLOR feedback vertex format */

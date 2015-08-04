@@ -4,7 +4,6 @@
  * Copyright (c) Inria, 1999-2007. All rights reserved. */
 
 #include "medit.h"
-#include "compil.date"
 #ifdef ppc
 #include <unistd.h>
 #endif
@@ -323,7 +322,6 @@ int main(int argc,char *argv[]) {
 
   fprintf(stdout,"  -- Medit,  Release %s (%s)\n",ME_VER,ME_REL);
   fprintf(stdout,"     %s.\n",ME_CPY);
-  fprintf(stdout,"     compiled: %s.\n\n",COMPIL);
 
   /* trap exceptions */
   signal(SIGABRT,excfun);

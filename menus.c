@@ -104,7 +104,7 @@ void doIsoLists(pScene sc,pMesh mesh,int reset) {
         if ( sc->slist[kk] )  glDeleteLists(sc->slist[kk],1);
         sc->slist[kk] = (GLuint)0;
       }
-      sc->slist = (GLuint)0;
+      sc->slist = NULL;
       if ( reset < 2 )   sc->stream->nbstl = 0;
       for (k=1; k<=mesh->np; k++) {
         ppt = &mesh->point[k];

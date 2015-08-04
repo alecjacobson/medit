@@ -2,7 +2,7 @@ LIBMESH = ./libmesh/
 
 LIBIGL=/usr/local/igl/libigl
 LIBIGL_INC=-I$(LIBIGL)/include
-LIBIGL_LIB=-L$(LIBIGL)/lib -ligl
+LIBIGL_LIB=-L$(LIBIGL)/lib -ligl -liglpng -liglanttweakbar
 
 EIGEN=/opt/local/include/eigen3
 EIGEN_INC=-I$(EIGEN)
@@ -11,9 +11,9 @@ ANTTWEAKBAR=$(LIBIGL)/external/AntTweakBar/
 ANTTWEAKBAR_INC=-I$(ANTTWEAKBAR)/include
 ANTTWEAKBAR_LIB=-L$(ANTTWEAKBAR)/lib -lAntTweakBar -framework  AppKit
 
-GL2PS=/opt/local/
-GL2PS_INC=-I$(GL2PS)/include
-GL2PS_LIB=-L$(GL2PS)/lib -lgl2ps
+#GL2PS=/opt/local/
+#GL2PS_INC=-I$(GL2PS)/include
+#GL2PS_LIB=-L$(GL2PS)/lib -lgl2ps
 
 INC = -I${LIBMESH} $(LIBIGL_INC) $(ANTTWEAKBAR_INC) $(GL2PS_INC) ${EIGEN_INC} -I$(LIBIGL)/external/yimg/ -DIGL_STATIC_LIBRARY
 LIBS  = -framework OpenGL -framework GLUT -L${LIBMESH} -lmesh $(LIBIGL_LIB) $(ANTTWEAKBAR_LIB) $(GL2PS_LIB)\

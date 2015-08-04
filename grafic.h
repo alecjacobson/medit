@@ -3,7 +3,7 @@
 
 #ifdef IGL
 #  include "IGLParams.h"
-#  include <igl/ReAntTweakBar.h>
+#  include <igl/anttweakbar/ReAntTweakBar.h>
 #endif
 
 #define MAX_LIST  4
@@ -225,7 +225,7 @@ typedef struct scene {
   ubyte      isotyp;
   ubyte      picked;
 #ifdef IGL
-  igl::ReTwBar rebar;
+  igl::anttweakbar::ReTwBar rebar;
   // Pointer so recompiling is easier
   IGLParams * igl_params; 
 #endif
